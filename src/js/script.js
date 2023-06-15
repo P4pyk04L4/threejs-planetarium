@@ -28,3 +28,17 @@ const boxGeometry = new THREE.BoxGeometry(1,1,1);
 const boxMaterial = new THREE.MeshStandardMaterial({color : 0x00ff00});
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
+
+
+const loader = new THREE.TextureLoader();
+// const bgTexture = loader.load('./img/nebuleuse.jpg');
+// scene.background = bgTexture;
+const cubeTextureLoader = new THREE.CubeTextureLoader()
+scene.background = cubeTextureLoader.load([
+    './img/stars.jpg',
+    './img/stars.jpg',
+    './img/stars.jpg',
+    './img/stars.jpg',
+    './img/stars.jpg',
+    './img/stars.jpg'
+]);
