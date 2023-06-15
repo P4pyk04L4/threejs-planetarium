@@ -20,3 +20,6 @@ const orbit = new OrbitControls(camera, renderer.domElement);
 
 camera.position.set(-90, 140, 140);
 orbit.update();
+
+const axesHelper = new THREE.AxesHelper(5);
+scene.add(axesHelper);
