@@ -11,7 +11,7 @@ document.body.appendChild(renderer.domElement);
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
     45,
-    window.innerWidth/window.innerHeight,
+    window.innerWidth/ window.innerHeight,
     0.1,
     1000
 );
@@ -23,3 +23,8 @@ orbit.update();
 
 const axesHelper = new THREE.AxesHelper(5);
 scene.add(axesHelper);
+
+const boxGeometry = new THREE.BoxGeometry(1,1,1);
+const boxMaterial = new THREE.MeshStandardMaterial({color : 0x00ff00});
+const box = new THREE.Mesh(boxGeometry, boxMaterial);
+scene.add(box);
